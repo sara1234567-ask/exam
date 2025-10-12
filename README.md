@@ -1,12 +1,67 @@
-# React + Vite
+# BookVerse – React Final Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![BookVerse](https://via.placeholder.com/800x200.png?text=BookVerse)
 
-Currently, two official plugins are available:
+## О проекте
+BookVerse – это одностраничное веб-приложение (SPA) на React, которое позволяет исследовать тысячи книг, фильтровать их по жанрам, читать онлайн-превью и добавлять в корзину. Приложение демонстрирует владение React, Zustand, Tailwind CSS, маршрутизацией и работой с API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Функционал
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Главная страница (Home)**
+   - Красочный интерактивный интерфейс
+   - Превью жанров с эмодзи
+   - Краткое описание возможностей библиотеки
+   - Призыв к действию с кнопкой перехода в каталог
+
+2. **Каталог книг (Catalog)**
+   - Подгрузка данных из Google Books API
+   - Фильтрация по жанрам и поиск по названию
+   - Карточки с информацией о книге, кнопками **Read** и **Add to Cart**
+   
+
+3. **Корзина (Cart)**
+   - Добавленные книги отображаются в корзине
+   - Возможность удалить книги из корзины
+
+4. **О нас (About)**
+   - Информация о проекте
+   - Контакты (телефон, email, Instagram)
+   - Миссия и интересные факты о библиотеке
+
+---
+
+## Технологии
+
+- **React.js** – функциональные компоненты, хуки `useState` и `useEffect`
+- **React Router** – маршрутизация
+- **Zustand** – управление состоянием (books, cart, filters)
+- **Axios** – работа с API Google Books
+- **Tailwind CSS** – стилизация и адаптивность
+- **Vite** – сборка проекта
+
+---
+
+## Структура проекта
+src/
+├── components/
+│ ├── BookCard.jsx
+│ ├── GenreFilter.jsx
+│ ├── Header.jsx
+│ └── Footer.jsx
+├── pages/
+│ ├── Home.jsx
+│ ├── Catalog.jsx
+│ ├── Cart.jsx
+│ ├── About.jsx
+│ 
+├── store/
+│ └── useBookStore.js
+├── App.jsx
+├── main.jsx
+└── index.css
+
+
+
+
