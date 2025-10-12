@@ -1,15 +1,45 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-export default function Header() {
+const Header = () => {
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "Catalog", path: "/catalog" },
+    { name: "Cart", path: "/cart" },
+    { name: "About", path: "/about" },
+  ];
+
   return (
-    <header className="bg-blue-600 text-white p-4 flex justify-between">
-      <h1 className="text-xl font-bold">Магазин</h1>
-      <nav className="flex gap-4">
-        <Link to="/" className="hover:underline">Товары</Link>
-        <Link to="/cart" className="hover:underline">Корзина</Link>
-        <Link to="/auth" className="hover:underline">Вход</Link>
-        <Link to="/profile" className="hover:underline">Профиль</Link>
-      </nav>
+    <header className="bg-yellow-300 shadow-md sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
+       
+        <div className="text-2xl font-bold text-yellow-800 flex items-center space-x-2">
+          <span>📚</span>
+          <span>BookVerse</span>
+        </div>
+
+        
+        <nav className="space-x-6 hidden md:flex">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.name}
+              to={item.path}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-yellow-800 font-semibold border-b-2 border-yellow-800 pb-1"
+                  : "text-gray-700 hover:text-yellow-800 transition"
+              }
+            >
+              {item.name}
+            </NavLink>
+          ))}
+        </nav>
+
+        
+      </div>
     </header>
   );
-}
+};
+
+export default Header;
+
+

@@ -1,24 +1,26 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header.jsx";
-import Products from "./pages/Products";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Catalog from "./pages/Catalog";
 import Cart from "./pages/Cart";
-import Auth from "./pages/Auth";
-import Profile from "./pages/Profile";
+import About from "./pages/About";
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100">
-        <Header />
-        <div className="p-4">
-          <Routes>
-            <Route path="/" element={<Products />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/auth" element={<Auth />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-        </div>
-      </div>
+      <Header />
+      <main className="min-h-screen p-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/about" element={<About />} />
+        
+
+        </Routes>
+      </main>
+      <Footer />
     </Router>
   );
 }
@@ -27,8 +29,6 @@ export default App;
 
 
 
-
- 
 
 
 
