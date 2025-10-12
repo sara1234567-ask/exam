@@ -43,24 +43,7 @@ BookVerse – это веб-приложение (SPA) на React, которо�
 
 ---
 
-## Структура проекта
-src/
-├── components/
-│ ├── BookCard.jsx
-│ ├── GenreFilter.jsx
-│ ├── Header.jsx
-│ └── Footer.jsx
-├── pages/
-│ ├── Home.jsx
-│ ├── Catalog.jsx
-│ ├── Cart.jsx
-│ ├── About.jsx
-│ 
-├── store/
-│ └── useBookStore.js
-├── App.jsx
-├── main.jsx
-└── index.css
+
 
 
 
