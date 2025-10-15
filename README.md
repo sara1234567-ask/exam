@@ -1,6 +1,7 @@
 # BookVerse – React Final Project
 
-![BookVerse](https://via.placeholder.com/800x200.png?text=BookVerse)
+![Uploading image.png…]()
+
 
 ## О проекте
 BookVerse – это веб-приложение (SPA) на React, которое позволяет исследовать книги, фильтровать их по жанрам, читать онлайн-превью и добавлять в корзину. Приложение демонстрирует владение React, Zustand, Tailwind CSS, маршрутизацией и работой с API.
