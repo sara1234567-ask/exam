@@ -2,7 +2,10 @@ import { useBookStore } from "../store/useBookStore";
 
 const BookCard = ({ book }) => {
   const addToCart = useBookStore((state) => state.addToCart);
-
+ const handleAddToCart = () => {
+    addToCart(book);
+    alert(`Книга "${book.title}" добавлена в корзину 📚`);
+  };
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-4 shadow flex flex-col h-full">
       <img src={book.cover} alt={book.title} className="w-full h-48 object-cover rounded mb-4" />
