@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
 const genres = [
-  { name: "Fiction", emoji: "📖" },
-  { name: "Fantasy", emoji: "🧙‍♂️" },
-  { name: "Science", emoji: "🔬" },
-  { name: "Romance", emoji: "❤️" },
-  { name: "Mystery", emoji: "🕵️‍♀️" },
+  { name: "Fiction", emoji: "📚" },   
+  { name: "Fantasy", emoji: "✨" },   
+  { name: "Science", emoji: "🔬" },   
+  { name: "Romance", emoji: "💌" },   
+  { name: "Mystery", emoji: "🧩" },   
 ];
+
 
 const Home = () => {
   const navigate = useNavigate();
